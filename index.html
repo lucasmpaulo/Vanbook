@@ -9,24 +9,26 @@
 	</head>
 	<body>
 
-	<header class="container">
+	<header class="container menu">
 		<div class="grid-5">
 			<a href="#"><img src="img/vanbook.png" alt="Vanbook"></a>
 		</div>
 		<nav class="grid-11">
-			<li><a href="#">Livros</a></li>
-			<li><a href="#"></a>Planos</li>
-			<li><a href="#"></a>Contato</li>
+			<ul>
+				<li><a href="#">Livros</a></li>
+				<li><a href="#">Planos</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
 		</nav>
 	</header>
 
 	<section class="planos">
 		<h1>Escolha o seu plano</h1>
 		<div class="container">
-			<div class="plano grid-5">
-				<div>
+			<div class="plano-item silver grid-5">
+				<div class="plano-nome">
 					<h2>Silver</h2>
-					<span>R$29</span>
+					<span><sup>R$</sup>29</span>
 				</div>
 				<ul>
 					<li>Acesso Mensal</li>
@@ -35,12 +37,12 @@
 				</ul>
 				<a href="#" class="btn">Inscreva-se</a>
 			</div>
-			<div class="plano grid-5">
-				<div>
+			<div class="plano-item grid-5">
+				<div class="plano-nome">
 					<h2>Gold</h2>
-					<span>R$59</span>
+					<span><sup>R$</sup>59</span>
 				</div>
-				<p>Recomendado</p>
+				<p class="recomendado">Recomendado</p>
 				<ul>
 					<li>Acesso Mensal</li>
 					<li>+ 160 Livros</li>
