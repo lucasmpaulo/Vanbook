@@ -1,6 +1,6 @@
 body {
 	font-family: "Proxima Nova Soft",Helvetica, arial, sans-serif;
-	padding-bottom: 600px;
+	padding-bottom: 80px;
 }
 
 .menu {
@@ -257,6 +257,115 @@ svg.animate path {
 		stroke-dashoffset: 0;
 	}
 }
+
+/* Seção benefícios */
+.beneficios-section {
+	margin-top: 80px;
+}
+
+.beneficio {
+	max-width: 800px;
+	margin: 0 auto 100px auto;
+	padding: 0px;
+	position: relative;
+}
+
+.beneficio::after, .beneficio::before {
+	content: "";
+	display: table;
+}
+
+.beneficio::after {
+	clear: both;
+}
+
+.beneficio h2 {
+	margin: 0 10px;
+	width: calc(50% - 20px);
+	float: left;
+	font-size: 3rem;
+	line-height: .8;
+	text-align: right;
+	text-transform: uppercase;
+	color: #02A7EC;
+}
+
+.beneficio h2::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: rgb(0, 0, 0, .05);
+	margin-bottom: 10px;
+}
+
+.beneficio p {
+	margin: 0 10px;
+	width: calc(50% - 20px);
+	float: left;
+	font-size: 1.125rem;
+	line-height: 1.4;
+	padding-left: 40px;
+	color: rgba(0, 0, 0, .7);
+}
+
+.beneficio:nth-child(even) h2 {
+	text-align: left;
+}
+
+.beneficio:nth-child(even) p {
+	text-align: right;
+	padding-right: 40px;
+	padding-left: 0px;
+}
+@media only screen and (max-width: 767px) {
+	.beneficios-section {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.beneficio {
+		max-width: 500px;
+		margin: 0 auto 50px auto;
+	}
+	.beneficio h2::before {
+		height: 0;
+	}
+	.beneficio h2::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 4px;
+		background: rgb(0, 0, 0, .05);
+		margin: 10px 0;
+	}
+	.beneficio p, .beneficio h2 {
+		float: none;
+	}
+	.beneficio h2 {
+		margin-bottom: 10px;
+		font-size: 1.5rem;
+		width: 100%;
+		text-align: left;
+	}
+	.beneficio p {
+		padding-left: 0;
+		width: 100%;
+	}
+}
+
+/* Animação Benefício */
+.anime {
+	opacity: 0;
+	transform: translate3d(-50px, 0, 0);
+}
+
+.anime-init {
+	opacity: 1;
+	transition: all .3s ease-in;
+	transform: translate3d(-15px, 0, 0);
+}
+
 
 /* This is a compiled file, you should be editing the file in the templates directory */
 .pace {
